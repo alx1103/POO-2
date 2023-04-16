@@ -1,0 +1,31 @@
+﻿<h2>Calificaciones</h2>
+
+@using (Html.BeginForm("Calificaciones", "Alumno", FormMethod.Post))
+{
+
+    <table>
+        <tr>
+            <td>@Html.Label("Nota 1")</td>
+            <td>@Html.TextBox("nota1")</td>
+        </tr>
+
+        <tr>
+            <td>@Html.Label("Nota 2")</td>
+            <td>@Html.TextBox("nota2")</td>
+        </tr>
+    
+        <tr>
+            <td>
+                <input type="submit" value="Calcular" />
+           </td>
+        </tr>
+    </table>
+}
+
+<p>
+    <strong>Promedio: </strong> @ViewBag.promedio <br />
+    <strong>Aprobado-Desaprobado: </strong> @ViewBag.condicion <br />
+</p>
+<br />
+
+
