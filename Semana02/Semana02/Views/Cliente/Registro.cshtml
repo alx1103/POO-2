@@ -1,0 +1,41 @@
+﻿<h2>Registro de Clientes</h2>
+
+<!--Nombre del metodo, nombre de el controlador-->
+@using (Html.BeginForm("Registro", "Cliente", FormMethod.Post))
+{
+    <p>
+        @Html.Label("Codigo") <br />
+        <!--Nombre del viewbag-->
+        @Html.TextBox("codigo")
+    </p>
+
+    <p>
+        @Html.Label("Nombre") <br />
+        <!--Nombre del viewbag-->
+        @Html.TextBox("nombre")
+    </p>
+
+    <p>
+        @Html.Label("Apellido") <br />
+        <!--Nombre del viewbag-->
+        @Html.TextBox("apellido")
+    </p>
+
+    <p>
+        @Html.Label("Email") <br />
+    <!--Nombre del viewbag-->
+    @Html.TextBox("email")
+    </p>
+
+    <p>
+        <input type="submit" value="Registrar"/>
+    </p>
+
+}
+
+    <p style="color:red">
+        <strong>Codigo: </strong> @ViewBag.codigo <br/>
+        <strong>Nombre: </strong> @ViewBag.nombre <br/>
+        <strong>Apellido: </strong> @ViewBag.apellido <br/>
+        <strong>Email: </strong> @ViewBag.email <br/>
+    </p>
