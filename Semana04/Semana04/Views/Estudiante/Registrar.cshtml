@@ -1,0 +1,36 @@
+﻿
+<h2>Registrar</h2>
+
+
+@using (Html.BeginForm("Registrar", "Estudiante", FormMethod.Post))
+{
+
+
+    <p>
+        @Html.Label("Nombre") <br />
+        @Html.TextBox("nombre")
+    </p>
+
+    <p>
+        @Html.Label("Correo") <br />
+        @Html.TextBox("correo")
+    </p>
+
+    <p>
+        @Html.Label("Apellido") <br />
+        @Html.TextBox("apellido")
+    </p>
+
+    <p>
+        @Html.Label("Telefono") <br />
+        @Html.TextBox("telefono")
+    </p>
+
+    <p>
+        <input type="submit" value="Registrar" />
+    </p>
+
+}
+
+<strong>@ViewBag.mensaje</strong>
+            
